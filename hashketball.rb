@@ -253,24 +253,8 @@ def team_names
     return array
 end
 
-# def shoe_size(player)
-#   array2 = []
-#   game_hash.each do |location, team_data|
-#       team_data.each do |attribute, values|
-#           if attribute == :players
-#             values.each do |person, data|
-#               data.each do |i, j|
-#                 if person == player && i == :shoe
-#                   array2.push(j)
-#                 end
 
-#               end
-#             end
-#           end
-#       end
-#   end
-#   return array2[0]
-# end
+
 
 def shoe_size(player_name)
   game_hash.each do |location, team_info|
@@ -284,18 +268,7 @@ end
 
 
 
-# def num_points_scored(player_name)
-#   player_points = 0
-#   game_hash.collect do |team, stats|
-#     stats[:players].collect do |player, data|
-#       if player == player_name
 
-#         player_points = data[:points]
-#     end 
-#   end 
-# end 
-# player_points
-# end 
 
 def num_points_scored(player_name)
   game_hash.each do |location, team_info|
@@ -308,24 +281,7 @@ def num_points_scored(player_name)
   end
 end
 
-# def player_numbers(team)
-#   array2 = []
-#   game_hash.each do |location, team_data|
-#       team_data.each do |attribute, values|
-#           if attribute == :players
-#             values.each do |person, data|
-#               data.each do |i, j|
-#                 if i == :number
-#                   array2.push(j)
-#                 end
 
-#               end
-#             end
-#           end
-#       end
-#   end
-#   return array2
-# end 
 
 def player_numbers(team)
   numbers = []
