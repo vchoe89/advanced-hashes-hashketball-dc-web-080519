@@ -274,18 +274,18 @@ end
 
 
 
-def num_points_scored(player_name)
-  player_points = 0
-  game_hash.collect do |team, stats|
-    stats[:players].collect do |player, data|
-      if player == player_name
+# def num_points_scored(player_name)
+#   player_points = 0
+#   game_hash.collect do |team, stats|
+#     stats[:players].collect do |player, data|
+#       if player == player_name
 
-        player_points = data[:points]
-    end 
-  end 
-end 
-player_points
-end 
+#         player_points = data[:points]
+#     end 
+#   end 
+# end 
+# player_points
+# end 
 
 # def player_numbers(team)
 #   array2 = []
