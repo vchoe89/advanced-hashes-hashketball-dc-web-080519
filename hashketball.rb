@@ -200,20 +200,22 @@ end
 #   return array2
 # end 
 
-def player_numbers (team_name)
-  player_numbers_list = []
-  game_hash.each do |team, team_details_hash|
-    if team_details_hash[:team_name] == team_name
-      team_details_hash[:players].each do |player|
-        player.each do |key, value|
-          if key == :number 
-            player_numbers_list << value
-          end
+def player_numbers(team)
+  numbers = []
+
+  game_hash.each do |location, team_info|
+    # location = home/away
+    team_info.each do |attribute, data|
+      # attribute = :team_name, :colors, :players
+      if data == team
+        game_hash[location][:players].each do |player|
+          numbers << player[:number]
         end
       end
     end
   end
-player_numbers_list
+  
+  numbers
 end
 
 
