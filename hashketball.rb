@@ -342,5 +342,22 @@ return numbers
 end
 
 
+def player_stats(player_name)
+  game_hash.each do |location, team_info|
+    # you know the vibes
+    team_info.each do |attribute, data|
+      if attribute == :players
+        data.each do |player|
+          if player[:player_name] == player_name
+            player.delete(:player_name)
+            return player
+          end
+        end
+      end
+    end
+  end
+end
+
+
 
 
