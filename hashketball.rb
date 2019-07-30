@@ -211,51 +211,8 @@ def player_numbers(team)
       end
     end
   end
-  
-numbers
+return numbers
 end
-
-
-
-([1,2,5].reduce(:+).to_f / [1,2,3].length.to_f)
-
-
-# def player_stats(player_name)
-#   player_stats = {}
-#   game_hash.each do |team, team_details_hash|
-#     team_details_hash[:players].each do |stats|
-
-#       if stats[:name] == player_name
-#         stats.delete(:name)
-#         player_stats = stats
-#       end
-#     end
-#   end
-#   player_stats
-# end
-
-def player_stats(player_name)
-  game_hash.keys.each do |team|
-    if game_hash[team][:players].keys.include?(player_name)
-      return game_hash[team][:players][player_name]
-    end 
-  end 
-end 
-
-def big_shoe_rebounds
-  big_shoes_guy = 0
-  rebounds = 0
-    game_hash.each do | team, team_details_hash|
-      team_details_hash[:players].each do | stats |
-        if stats[:shoe] > big_shoes_guy
-          big_shoes_guy = stats[:shoe]
-          rebounds = stats[:rebounds]
-        end
-      end
-    end
-  rebounds
-end
-
 
 
 
